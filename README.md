@@ -1,6 +1,6 @@
 # Indywidualny Projekt
 
-_WAR OF DWARF_
+_WAR OF DWARVES_
 
 ---
 
