@@ -21,5 +21,6 @@ Wygrywa strona, która pierwsza zniszczy fortecę przeciwnika.
 * (OPCJONALNIE) Poziomy trudności (_łatwy, średni, epicki_)
 * (OPCJONALNIE) Multiplayer (_Nigdy wcześniej mi się to nie udało_)
 * (OPCJONALNIE) Statystyki (_Wygrane: 2, Przegrane: 0, Zabite jednostki: 41, Zwerbowane jednostki: 28_)
+* (OPCJONALNIE) Automatyczna Obrona Fortecy (_Kusznica zadająca obrażenia w danym promieniu_)
 
 Projekt wykonany w Unity C#
