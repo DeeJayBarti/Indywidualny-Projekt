@@ -4,26 +4,39 @@ using UnityEngine;
 
 public class Poruszanie : MonoBehaviour {
 
-    public float PredkoscPoruszania = 0.5f;
-    // Use this for initialization
-    void Start () {
-		
+    public float MovementSpeed = 0.5f;
+
+    void Start ()
+    {
+        /*if(gameObject.tag == "Enemy")
+        {
+            GetComponent<SkryptOrk>
+        }
+        else if(gameObject.tag == "Friend")
+        {
+            GetComponent<SkryptWojownik>
+        }*/
+		//if tag enemy to bierzemy getckomponent ork jak drugi tag to wojownik
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
         PoruszaniePrawo();
 	}
 
     void PoruszaniePrawo()
     {
+        SkryptWojownik SW = GameObject.FindObjectOfType<SkryptWojownik>();
+        SkryptOrk SO = GameObject.FindObjectOfType<SkryptOrk>();
         if (gameObject.CompareTag("Friend"))
         {
-            transform.Translate(Vector2.right * PredkoscPoruszania * Time.deltaTime);
+            if(!SW.IsCollidingWithEnemy)
+                transform.Translate(Vector2.right * MovementSpeed * Time.deltaTime);
         }
-        else {
-            transform.Translate(Vector2.right * -PredkoscPoruszania * Time.deltaTime);
+        else if (gameObject.CompareTag("Enemy"))
+        {
+            if(!SO.IsCollidingWithFriend)
+                transform.Translate(Vector2.right * -MovementSpeed * Time.deltaTime);
         }
-        //transform.Translate(Vector2.right * PredkoscPoruszania * Time.deltaTime);
     }
 }
